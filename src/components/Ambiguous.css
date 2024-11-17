@@ -1,66 +1,58 @@
-/* Ambiguous.css */
-
-/* Container styling */
-form {
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+h1 {
+    color: #333;
+    font-size: 1.2em;
+    margin-bottom: 15px;
 }
 
+/* Label and Input Styles */
 label {
-    color: #333;
+    display: block;
+    margin-top: 10px;
+    color: #666;
     font-size: 0.9em;
-    font-weight: bold;
-    margin-bottom: 5px;
 }
 
 input[type="number"],
 input[type="text"] {
-    width: 100%;
-    padding: 10px;
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-top: 5px;
     border: 1px solid #cccccc;
     border-radius: 5px;
-    font-size: 1em;
+    font-size: 0.9em;
     box-sizing: border-box;
-    background-color: #f9f9f9;
 }
 
-/* Style for result field */
 input[readonly] {
-    background-color: #f0f4f8;
+    background-color: #f7f7f7;
     color: #333;
 }
 
-/* Button styling */
+/* Button Styles */
 button {
-    padding: 12px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
     background-color: #4CAF50;
     color: white;
-    font-size: 1em;
-    font-weight: bold;
+    font-size: 0.9em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
 }
 
 button:hover {
     background-color: #45a049;
 }
 
-/* Add responsiveness */
-@media (max-width: 500px) {
-    form {
-        padding: 15px;
-    }
+/* Form-Specific Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
-    button {
-        font-size: 0.9em;
-    }
+form label,
+form input {
+    width: 100%;
 }
