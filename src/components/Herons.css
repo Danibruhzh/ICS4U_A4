@@ -1,70 +1,73 @@
-/* Main form container */
+/* Herons.css */
+
+/* Container styling */
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #f4f4f9;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    margin: auto;
-    transition: all 0.3s ease-in-out;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+h1 {
+  font-size: 1.4em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+label {
+  color: #333;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1em;
+  box-sizing: border-box;
+  background-color: #f9f9f9;
+}
+
+input[readonly] {
+  background-color: #f0f4f8;
+  color: #333;
+}
+
+/* Button styling */
+button {
+  padding: 12px;
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Responsive adjustments */
+@media (max-width: 500px) {
+  form {
+      padding: 15px;
   }
-  
-  /* Heading */
-  h1 {
-    text-align: center;
-    font-size: 1.5rem;
-    margin-bottom: 20px;
-    color: #333;
+
+  button {
+      font-size: 0.9em;
   }
-  
-  /* Labels */
-  label {
-    font-size: 1rem;
-    margin-bottom: 8px;
-    color: #555;
-  }
-  
-  /* Input fields */
-  input[type="number"],
-  input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-sizing: border-box;
-    transition: border-color 0.3s ease;
-  }
-  
-  input[type="number"]:focus,
-  input[type="text"]:focus {
-    border-color: #5b9bd5;
-    outline: none;
-  }
-  
-  /* Button */
-  button#heron-button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button#heron-button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Read-only input (for displaying area) */
-  input[readonly] {
-    background-color: #e9ecef;
-    cursor: not-allowed;
-  }
-  
+}
